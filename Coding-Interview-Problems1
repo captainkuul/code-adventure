@@ -1,0 +1,22 @@
+#Collect Input
+first_num = int(input("Please enter the first number: "))
+second_num = int(input("Please enter the second number: "))
+third_num = int(input("Please enter the third number: "))
+fourth_num = int(input("Please enter the fourth number: "))
+exp_total = 17
+
+#Save Input in an array
+num_list = [first_num, second_num, third_num, fourth_num]
+#Create a copy of array so that we can compare 2 numbers one from each list.
+num_list_new = num_list.copy()
+
+#Loop condition to compare and add up a number from each list and print out true result if equals to expected total
+for num in num_list:
+    for num_copy in num_list_new:
+        if num + num_copy == exp_total:
+            print("{} and {} = {}".format(num, num_copy, exp_total))
+            print(True)
+            break
+    else:
+        print("(False) the numbers don't add up to the expected total")
+    break
